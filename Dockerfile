@@ -2,6 +2,7 @@ FROM jenkins
 
 USER root
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 RUN apt-get update && apt-get install -y openjdk-7-jdk openjdk-8-jdk ubuntu-make
 
