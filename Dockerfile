@@ -65,7 +65,8 @@ COPY plugins.sh /usr/local/bin/plugins.sh
 RUN add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 RUN apt-get update && apt-get install -y ubuntu-make
 
-RUN umake android android-sdk
+RUN umake android android-sdk --accept-license ~/.local/share/umake/android/android-sdk
+
 ENV ANDROID_HOME /root/.local/share/umake/android/android-sdk
 ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
