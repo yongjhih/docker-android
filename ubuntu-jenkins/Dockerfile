@@ -1,5 +1,9 @@
 FROM ubuntu
 
+MAINTAINER Andrew Chen <yongjhih@gmail.com>
+
+ENV DEBIAN_FRONTEND noninteractive
+
 USER root
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
