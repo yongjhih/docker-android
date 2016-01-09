@@ -15,9 +15,9 @@ RUN apt-get update && apt-get install -y wget git curl zip software-properties-c
 RUN add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 RUN apt-get update && apt-get install -y ubuntu-make
 
-RUN umake android android-sdk --accept-license ~/.local/share/umake/android/android-sdk
+RUN umake android android-sdk --accept-license /usr/local/share/umake/android/android-sdk
 
-ENV ANDROID_HOME /root/.local/share/umake/android/android-sdk
+ENV ANDROID_HOME /usr/local/share/umake/android/android-sdk
 ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
 RUN echo "y" | android update sdk -u -a --filter platform-tools,android-23,build-tools-23.0.1,extra-android-support,extra-android-m2repository,extra-google-google_play_services
