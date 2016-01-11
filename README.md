@@ -1,10 +1,11 @@
-# Android Jenkins slave on Docker
+# Android Jenkins on Docker
 
 ## See Also
 
 * https://hub.docker.com/r/yongjhih/ubuntu-jenkins
 * https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android
-* https://hub.docker.com/r/yongjhih/docker-android-jenkinslave
+* https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android-extra
+* https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android-all
 
 ## ref.
 
