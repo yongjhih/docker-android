@@ -12,6 +12,7 @@ ENV ANDROID_HOME /usr/local/share/umake/android/android-sdk
 ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
 RUN echo "y" | android update sdk -u -a --filter android-23
+RUN echo "y" | android update sdk -u -a --filter build-tools-23.0.2
 RUN echo "y" | android update sdk -u -a --filter build-tools-23.0.1
 RUN echo "y" | android update sdk -u -a --filter build-tools-23.0.0
 
