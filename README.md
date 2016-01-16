@@ -1,5 +1,10 @@
 # Android Jenkins on Docker
 
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-extra:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-23:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-23:latest 'Get your own badge on imagelayers.io')
+
 ## See Also
 
 * https://hub.docker.com/r/yongjhih/ubuntu-jenkins
