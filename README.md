@@ -10,7 +10,7 @@
 * https://hub.docker.com/r/yongjhih/ubuntu-jenkins
 * https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android
 * https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android-extra
-* https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android-all
+* https://hub.docker.com/r/yongjhih/ubuntu-jenkins-android-23
 
 ## ref.
 
