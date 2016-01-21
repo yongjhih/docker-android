@@ -1,4 +1,4 @@
-FROM ubuntu-openjdk-8-android-extra
+FROM yongjhih/ubuntu-openjdk-8-android-extra
 
 RUN echo "y" | android update sdk -u -a --filter android-23
 

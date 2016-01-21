@@ -1,4 +1,4 @@
-FROM ubuntu-openjdk-8
+FROM yongjhih/ubuntu-openjdk-8
 
 RUN wget http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz -O - | tar zxv -C /opt
 
