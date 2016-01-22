@@ -10,6 +10,39 @@
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-extra:latest)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all:latest)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest)
+## Usage
+
+jenkins master:
+
+```sh
+docker run -d -p 8080:8080 -p 50000:50000 -v /home/jenkins:/var/jenkins_home yongjhih/ubuntu-openjdk-8-android-all-jenkins
+```
+
+android dev with 1001 uid:
+
+```sh
+docker run -it -v /home/yongjhih/.gradle:/home/yongjhih/.gradle -v /home/yongjhih/works/android:/home/yongjhih/works/android yongjhih/ubuntu-openjdk-8-android-all-1001 bash
+```
+
+android dev with other uid:
+
+```dockerfile
+FROM yongjhih/ubuntu-openjdk-8-android-all
+
+ENV UID=${UID:-1001}
+RUN useradd -m -s /bin/bash -u $UID yongjhih # UID
+RUN echo "yongjhih ALL=(ALL)   NOPASSWD: ALL" >> /etc/sudoers
+
+RUN find ${ANDROID_HOME} -type d -exec chmod a+rwx {} \; # Fix **/package.xml (Permission Denied)
+
+USER yongjhih
+```
+
+```sh
+docker build --fr -t $UID .
+docker run -it -v /home/yongjhih/.gradle:/home/yongjhih/.gradle -v /home/yongjhih/works/android:/home/yongjhih/works/android $UID bash
+```
+
 ## ref.
 
 * https://github.com/jenkinsci/docker#installing-more-tools
