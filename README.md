@@ -10,6 +10,9 @@
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-extra:latest)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all:latest)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest)
+
+![](art/docker-android.png)
+
 ## Usage
 
 jenkins master:
