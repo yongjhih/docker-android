@@ -55,4 +55,4 @@ docker run -it -v /home/yongjhih/.gradle:/home/yongjhih/.gradle -v /home/yongjhi
 
 # LICENSE
 
-Apache 2.0 by 8tory
+Apache 2.0, 2015 8tory Inc.
