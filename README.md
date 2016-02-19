@@ -1,5 +1,7 @@
 # Android Jenkins on Docker
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/yongjhih/android.svg)](https://hub.docker.com/r/yongjhih/android/)
+[![Docker Stars](https://img.shields.io/docker/stars/yongjhih/android.svg)](https://hub.docker.com/r/yongjhih/android/)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins:latest)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android:latest)
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-extra:latest)
