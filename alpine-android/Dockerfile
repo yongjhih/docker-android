@@ -7,7 +7,7 @@ RUN apk upgrade --update && \
     apk add --update curl ca-certificates bash && \
     mkdir -p /opt && curl -L $ANDROID_SDK_ZIP | tar zxv -C /opt && \
     apk del curl && \
-    rm /tmp/* /var/cache/apk/*
+    rm /var/cache/apk/*
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
