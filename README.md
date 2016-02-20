@@ -16,6 +16,13 @@
 docker run -it -v $PWD:/code yongjhih/android /code/gradlew -p /code assembleDebug
 ```
 
+or with docker-compose:
+
+```sh
+wget https://github.com/yongjhih/docker-android/blob/master/docker-compose.yml
+docker-compose up
+```
+
 ## Misc
 
 ubuntu-openjdk-8-android-all:
