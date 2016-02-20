@@ -1,4 +1,4 @@
-FROM alpine-openjdk8
+FROM yongjhih/alpine-openjdk
 
 # https://github.com/yongjhih/docker-android/blob/master/ubuntu-openjdk-8-android/Dockerfile
 ENV ANDROID_SDK_ZIP http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
