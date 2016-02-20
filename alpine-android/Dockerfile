@@ -5,7 +5,9 @@ ENV ANDROID_SDK_ZIP http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 
 RUN apk upgrade --update && \
     apk add --update curl ca-certificates bash && \
-    mkdir -p /opt && curl -L $ANDROID_SDK_ZIP | tar zxv -C /opt
+    mkdir -p /opt && curl -L $ANDROID_SDK_ZIP | tar zxv -C /opt && \
+    apk del curl && \
+    rm /tmp/* /var/cache/apk/*
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
