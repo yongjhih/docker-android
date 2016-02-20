@@ -1,21 +1,65 @@
-# Android Jenkins on Docker
+# Docker Android
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/yongjhih/ubuntu-openjdk-8-android-all.svg)](https://hub.docker.com/r/yongjhih/ubuntu-openjdk-8-android-all/)
-[![Docker Stars](https://img.shields.io/docker/stars/yongjhih/ubuntu-openjdk-8-android-all.svg)](https://hub.docker.com/r/yongjhih/ubuntu-openjdk-8-android-all/)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-extra:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-23:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-23:latest)
-
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-extra:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all:latest)
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest)
+[![Docker Tag](https://img.shields.io/github/tag/yongjhih/docker-android.svg)](https://hub.docker.com/r/yongjhih/android/tags/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/yongjhih/android.svg)](https://hub.docker.com/r/yongjhih/android/)
+[![Docker Stars](https://img.shields.io/docker/stars/yongjhih/android.svg)](https://hub.docker.com/r/yongjhih/android/)
+[![Docker Size](https://img.shields.io/imagelayers/image-size/yongjhih/android/latest.svg)](https://imagelayers.io/?images=yongjhih/android:latest)
+[![Docker Layers](https://img.shields.io/imagelayers/layers/yongjhih/android/latest.svg)](https://imagelayers.io/?images=yongjhih/android:latest)
+[![License](https://img.shields.io/github/license/yongjhih/docker-android.svg)](https://github.com/yongjhih/docker-android/raw/master/LICENSE)
+[![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/docker-android.svg)](https://gitter.im/yongjhih/docker-android)
 
 ![](art/docker-android.png)
 
 ## Usage
+
+```sh
+docker run -it -v $PWD:/code yongjhih/android /code/gradlew -p /code assembleDebug
+```
+
+## Misc
+
+ubuntu-openjdk-8-android-all:
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/yongjhih/ubuntu-openjdk-8-android-all.svg)](https://hub.docker.com/r/yongjhih/ubuntu-openjdk-8-android-all/)
+[![Docker Stars](https://img.shields.io/docker/stars/yongjhih/ubuntu-openjdk-8-android-all.svg)](https://hub.docker.com/r/yongjhih/ubuntu-openjdk-8-android-all/)
+
+ubuntu-jenkins:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins:latest)
+
+ubuntu-jenkins-android:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android:latest)
+
+ubuntu-jenkins-android-extra:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-extra:latest)
+
+ubuntu-jenkins-android-23:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-23:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-23:latest)
+
+ubuntu-openjdk-8:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8:latest)
+
+ubuntu-openjdk-8-android:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android:latest)
+
+ubuntu-openjdk-8-android-extra:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-extra:latest)
+
+ubuntu-openjdk-8-android-all:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all:latest)
+
+ubuntu-openjdk-8-android-all-jenkins:
+
+[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest)
+
+### Usage of ubuntu images
 
 jenkins master:
 
