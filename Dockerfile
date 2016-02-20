@@ -50,3 +50,8 @@ RUN echo "y" | android update sdk -u -a --filter android-23 && \
     echo "y" | android update sdk -u -a --filter build-tools-23.0.2 && \
     echo "y" | android update sdk -u -a --filter build-tools-23.0.1 && \
     echo "y" | android update sdk -u -a --filter build-tools-23.0.0
+
+ENV TINI_VERSION v0.9.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
