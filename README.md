@@ -23,7 +23,7 @@ wget https://github.com/yongjhih/docker-android/blob/master/docker-compose.yml
 docker-compose up
 ```
 
-## Misc
+## Bonus
 
 ubuntu-openjdk-8-android-all:
 
