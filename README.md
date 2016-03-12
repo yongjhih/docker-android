@@ -14,6 +14,7 @@
 
 ```sh
 wget https://github.com/yongjhih/docker-android/raw/master/docker-android -O ~/bin/docker-android
+chmod a+x ~/bin/docker-android
 docker-android ./gradlew assembleDebug
 ```
 
