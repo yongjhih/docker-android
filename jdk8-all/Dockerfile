@@ -1,4 +1,4 @@
-FROM yongjhih/ubuntu-openjdk-8-android-tools
+FROM yongjhih/android:jdk8-tools
 
 RUN echo "y" | android update sdk -u -a --filter android-19 && \
     echo "y" | android update sdk -u -a --filter build-tools-19.1.0 && \

@@ -21,65 +21,44 @@ $ docker-android ./gradlew assembleDebug
 
 ## Bonus
 
-ubuntu-openjdk-8-android-all:
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/yongjhih/ubuntu-openjdk-8-android-all.svg)](https://hub.docker.com/r/yongjhih/ubuntu-openjdk-8-android-all/)
-[![Docker Stars](https://img.shields.io/docker/stars/yongjhih/ubuntu-openjdk-8-android-all.svg)](https://hub.docker.com/r/yongjhih/ubuntu-openjdk-8-android-all/)
-
-ubuntu-jenkins:
-
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins:latest)
-
-ubuntu-jenkins-android:
-
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android:latest)
-
-ubuntu-jenkins-android-extra:
-
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-extra:latest)
-
-ubuntu-jenkins-android-23:
-
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-jenkins-android-23:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-jenkins-android-23:latest)
-
-ubuntu-openjdk-8:
+yongjhih/ubuntu-openjdk-8
 
 [![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8:latest)
 
-ubuntu-openjdk-8-android:
+yongjhih/android:jdk8
 
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android:latest)
+[![](https://badge.imagelayers.io/yongjhih/android:jdk8.svg)](https://imagelayers.io/?images=yongjhih/android:jdk8)
 
-ubuntu-openjdk-8-android-extra:
+yongjhih/android:jdk8-extra
 
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-extra:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-extra:latest)
+[![](https://badge.imagelayers.io/yongjhih/android:jdk8-extra.svg)](https://imagelayers.io/?images=yongjhih/android:jdk8-extra)
 
-ubuntu-openjdk-8-android-all:
+yongjhih/android:jdk8-all
 
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all:latest)
+[![](https://badge.imagelayers.io/yongjhih/android:jdk8-all.svg)](https://imagelayers.io/?images=yongjhih/android:jdk8-all)
 
-ubuntu-openjdk-8-android-all-jenkins:
+yongjhih/android:jdk8-all-jenkins
 
-[![](https://badge.imagelayers.io/yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest.svg)](https://imagelayers.io/?images=yongjhih/ubuntu-openjdk-8-android-all-jenkins:latest)
+[![](https://badge.imagelayers.io/yongjhih/android:jdk8-all-jenkins.svg)](https://imagelayers.io/?images=yongjhih/android:jdk8-all-jenkins)
 
 ### Usage of ubuntu images
 
 jenkins master:
 
 ```sh
-docker run -d -p 8080:8080 -p 50000:50000 -v /home/jenkins:/var/jenkins_home yongjhih/ubuntu-openjdk-8-android-all-jenkins
+docker run -d -p 8080:8080 -p 50000:50000 -v /home/jenkins:/var/jenkins_home yongjhih/android:jdk8-all-jenkins
 ```
 
 android dev with 1001 uid:
 
 ```sh
-docker run -it -v /home/yongjhih/.gradle:/home/yongjhih/.gradle -v /home/yongjhih/works/android:/home/yongjhih/works/android yongjhih/ubuntu-openjdk-8-android-all-1001 bash
+docker run -it -v /home/yongjhih/.gradle:/home/yongjhih/.gradle -v /home/yongjhih/works/android:/home/yongjhih/works/android yongjhih/android:jdk8-all-1001 bash
 ```
 
 android dev with other uid:
 
 ```dockerfile
-FROM yongjhih/ubuntu-openjdk-8-android-all
+FROM yongjhih/android:jdk8-all
 
 ENV UID=${UID:-1001}
 RUN useradd -m -s /bin/bash -u $UID yongjhih # UID

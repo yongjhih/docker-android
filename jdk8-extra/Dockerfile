@@ -1,4 +1,4 @@
-FROM yongjhih/ubuntu-openjdk-8-android-tools
+FROM yongjhih/android:jdk8-tools
 
 RUN echo "y" | android update sdk -u -a --filter extra-android-support && \
     echo "y" | android update sdk -u -a --filter extra-android-m2repository && \

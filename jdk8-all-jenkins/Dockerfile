@@ -1,4 +1,4 @@
-FROM yongjhih/ubuntu-openjdk-8-android-all
+FROM yongjhih/android:jdk8-all
 
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000

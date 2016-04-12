@@ -13,7 +13,7 @@
 
 set -e
 
-IMAGE="yongjhih/ubuntu-openjdk-8-android-all"
+IMAGE="yongjhih/android"
 
 
 # Setup options for connecting to docker host
