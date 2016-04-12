@@ -1,4 +1,4 @@
-FROM yongjhih/ubuntu-openjdk-8-android-extra
+FROM yongjhih/ubuntu-openjdk-8-android-tools
 
 RUN echo "y" | android update sdk -u -a --filter android-19 && \
     echo "y" | android update sdk -u -a --filter build-tools-19.1.0 && \
@@ -29,3 +29,9 @@ RUN echo "y" | android update sdk -u -a --filter android-23 && \
 
 RUN echo "y" | android update sdk -u -a --filter platform-tools-preview && \
     echo "y" | android update sdk -u -a --filter build-tools-24.0.0-preview
+
+RUN echo "y" | android update sdk -u -a --filter extra-android-support && \
+    echo "y" | android update sdk -u -a --filter extra-android-m2repository && \
+    echo "y" | android update sdk -u -a --filter extra-google-google_play_services && \
+    echo "y" | android update sdk -u -a --filter extra-google-m2repository && \
+    echo "y" | android update sdk -u -a --filter extra-google-analytics_sdk_v2
