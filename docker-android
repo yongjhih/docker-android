@@ -39,7 +39,8 @@ if [ -n "$docker_android_dir" ]; then
     VOLUMES="$VOLUMES -v $docker_android_dir:$docker_android_dir"
 fi
 if [ -n "$HOME" ]; then
-    VOLUMES="$VOLUMES -v $HOME:$HOME -v $HOME:/root" # mount $HOME in /root to share docker.config
+    #VOLUMES="$VOLUMES -v $HOME:$HOME -v $HOME:/root" # mount $HOME in /root to share docker.config
+    VOLUMES="$VOLUMES -v $HOME/.gradle:$HOME/.gradle -v $HOME/.gradle:/root/.gradle -v $HOME:/root" # mount $HOME in /root to share docker.config
 fi
 
 # Only allocate tty if we detect one
