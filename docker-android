@@ -40,7 +40,7 @@ if [ -n "$docker_android_dir" ]; then
 fi
 if [ -n "$HOME" ]; then
     #VOLUMES="$VOLUMES -v $HOME:$HOME -v $HOME:/root" # mount $HOME in /root to share docker.config
-    VOLUMES="$VOLUMES -v $HOME/.gradle:$HOME/.gradle -v $HOME/.gradle:/root/.gradle -v $HOME:/root" # mount $HOME in /root to share docker.config
+    VOLUMES="$VOLUMES -v $HOME:$HOME -v $HOME/.gradle:$HOME/.gradle" # mount $HOME in /root to share docker.config
 fi
 
 # Only allocate tty if we detect one
@@ -51,4 +51,6 @@ if [ -t 0 ]; then
     DOCKER_RUN_OPTIONS="$DOCKER_RUN_OPTIONS -i"
 fi
 
-exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $DOCKER_ANDROID_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE "$@"
+#exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $DOCKER_ANDROID_OPTIONS $VOLUMES -w "$(pwd)" -u $uid:$UID -e HOME=$HOME $IMAGE "$@"
+# ?/.gradle
+exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $DOCKER_ANDROID_OPTIONS $VOLUMES -w "$(pwd)" -e uid=$UID -e user=$USER $IMAGE "$@"

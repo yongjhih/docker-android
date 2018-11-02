@@ -19,6 +19,10 @@ $ chmod a+x ~/bin/docker-android
 $ docker-android ./gradlew assembleDebug
 ```
 
-# LICENSE
+## References
+
+* https://developer.android.com/studio/command-line/sdkmanager
+
+## LICENSE
 
 Apache 2.0, 2015 Andrew Chen

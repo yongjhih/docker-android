@@ -101,3 +101,6 @@ RUN (echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --licenses &&
 #   extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5         | 1            | ConstraintLayout for Android 1.0.0-beta5
 #   extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1               | 1            | ConstraintLayout for Android 1.0.1
 #   extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2               | 1            | ConstraintLayout for Android 1.0.2
+
+ADD "docker-entrypoint.sh" "/docker-entrypoint.sh"
+ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
