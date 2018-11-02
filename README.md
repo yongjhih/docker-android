@@ -19,6 +19,10 @@ $ chmod a+x ~/bin/docker-android
 $ docker-android ./gradlew assembleDebug
 ```
 
+```sh
+docker run --rm -v $HOME:$HOME -v $HOME/.gradle:$HOME/.gradle -w $(pwd) -e uid=$UID -e user=$USER yongjhih/android ./gradlew assembleDebug
+```
+
 ## References
 
 * https://developer.android.com/studio/command-line/sdkmanager
