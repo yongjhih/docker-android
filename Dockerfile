@@ -5,11 +5,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ENV TINI_VERSION v0.18.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-RUN chmod +x /tini
-ENTRYPOINT ["/tini", "--"]
-
 ENV GOSU_VERSION 1.11
 RUN dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" && \
     wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" && \
@@ -103,5 +98,3 @@ RUN (echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --licenses &&
 #   extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2               | 1            | ConstraintLayout for Android 1.0.2
 
 RUN chmod -R a+w /android-sdk
-ADD "docker-entrypoint.sh" "/docker-entrypoint.sh"
-ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
