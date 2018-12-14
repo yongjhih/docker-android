@@ -24,10 +24,8 @@ RUN wget $ANDROID_SDK_ZIP -O /tmp/android-sdk-tools.zip && \
 ENV ANDROID_HOME /android-sdk
 ENV ANDROID_SDK $ANDROID_HOME
 
-ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
 RUN (echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --licenses && \
-    sdkmanager "build-tools;28.0.2" \
-               "build-tools;24.0.0" \
+    sdkmanager "build-tools;24.0.0" \
                "build-tools;24.0.1" \
                "build-tools;24.0.2" \
                "build-tools;24.0.3" \
@@ -40,7 +38,7 @@ RUN (echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --licenses &&
                "build-tools;26.0.2" \
                "build-tools;26.0.3" \
                "build-tools;27.0.0" \
-               #"build-tools;27.0.1" \ An error occurred while preparing SDK package Android SDK Build-Tools 27.0.1: archive is not a ZIP archive.
+               "build-tools;27.0.1" \
                "build-tools;27.0.2" \
                "build-tools;27.0.3" \
                "build-tools;28.0.0" \
