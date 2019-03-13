@@ -24,6 +24,8 @@ RUN wget $ANDROID_SDK_ZIP -O /tmp/android-sdk-tools.zip && \
 ENV ANDROID_HOME /android-sdk
 ENV ANDROID_SDK $ANDROID_HOME
 
+ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
+
 RUN (echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --licenses && \
     sdkmanager "build-tools;24.0.0" \
                "build-tools;24.0.1" \
