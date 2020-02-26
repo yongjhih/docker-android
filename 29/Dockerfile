@@ -54,7 +54,11 @@ ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
 #  platforms;android-29                     | 3            | 4
 #  system-images;android-29;google_apis;x86 | 8            | 9
 RUN (echo y; echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --licenses && \
-    sdkmanager "build-tools;29.0.0" \
+    sdkmanager "build-tools;28.0.0" \
+               "build-tools;28.0.1" \
+               "build-tools;28.0.2" \
+               "build-tools;28.0.3" \
+               "build-tools;29.0.0" \
                "build-tools;29.0.1" \
                "build-tools;29.0.2" \
                "build-tools;29.0.3"
