@@ -61,7 +61,9 @@ RUN (echo y; echo y; echo y; echo y; echo y; echo y; echo y) | sdkmanager  --lic
                "build-tools;29.0.0" \
                "build-tools;29.0.1" \
                "build-tools;29.0.2" \
-               "build-tools;29.0.3"
+               "build-tools;29.0.3" \
+               "platform-tools" \
+               "platforms;android-29"
 
 # We'd not install platform;android-* in this image, because currently build-tools can automatically install the corresponding android platform
 
